@@ -6,6 +6,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 import logging
 import time
 from tenacity import retry, stop_after_attempt, wait_fixed
+import os
 
 # Logger setup
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -15,7 +16,8 @@ logger = logging.getLogger(__name__)
 COOKIE_FILE = 'sellercentral.amazon.co.uk_json.json'
 URL = "https://sellercentral.amazon.co.uk/hz/fba/profitabilitycalculator/index?lang=en_GB"
 SHEET_URL = "https://docs.google.com/spreadsheets/d/12q4pt53suMHixlJ3Zd_J5frLDp-yBdLU3U1pZmLGlu8"
-CREDENTIALS_PATH = r"C:\Users\PC\Downloads\Puppeeteer\servicefile.json"
+CREDENTIALS_PATH = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+
 
 def fix_cookies(cookies):
     valid_same_site = {"Strict", "Lax", "None"}
