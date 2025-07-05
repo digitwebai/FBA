@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 COOKIE_FILE = 'sellercentral.amazon.co.uk_json.json'
 URL = "https://sellercentral.amazon.co.uk/hz/fba/profitabilitycalculator/index?lang=en_GB"
 SHEET_URL = "https://docs.google.com/spreadsheets/d/12q4pt53suMHixlJ3Zd_J5frLDp-yBdLU3U1pZmLGlu8"
-CREDENTIALS_PATH = r"C:\Users\PC\Downloads\Puppeeteer\service_client.json"
+CREDENTIALS_PATH = r"C:\Users\PC\Downloads\Puppeeteer\servicefile.json"
 
 def fix_cookies(cookies):
     valid_same_site = {"Strict", "Lax", "None"}

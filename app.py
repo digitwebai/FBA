@@ -16,7 +16,7 @@ st.markdown("Click the button below to fetch profit margins for ASINs from your 
 def install_playwright_browsers():
     try:
         with st.spinner("Installing Playwright browsers..."):
-            subprocess.run(["playwright", "install", "--with-deps"], check=True)
+            subprocess.run(["playwright", "install"], check=True)
         st.success("Playwright browsers installed successfully.")
     except Exception as e:
         st.error(f"Failed to install Playwright browsers: {e}")
