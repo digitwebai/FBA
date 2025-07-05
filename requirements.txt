@@ -5,8 +5,8 @@ tenacity>=8.1.0,<9
 requests==2.28.1
 streamlit==1.35.0
 greenlet==2.0.1
-
-   
-
-
-   
+rich>=10.14.0
+markdown-it-py>=2.2.0
+pygments>=2.13.0,<3.0.0
+mdurl~=0.1
+numpy
